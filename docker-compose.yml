@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: mon-serveur-web
+    ports:
+      - "9090:80"
+    volumes:
+      - .:/usr/share/nginx/html
+    restart: always
